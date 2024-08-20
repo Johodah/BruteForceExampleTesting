@@ -39,7 +39,7 @@ namespace BruteForceExample
 
                 current = (alphabet[pos[5]] + alphabet[pos[4]] + alphabet[pos[3]] + alphabet[pos[2]] + alphabet[pos[1]] + alphabet[pos[0]]).ToString();
 
-                Console.WriteLine($"\nLetter group: {current}");
+                Console.WriteLine($"\nLetter sequence: {current}");
 
                 pos[0]++;
             
