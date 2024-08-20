@@ -13,8 +13,8 @@ namespace BruteForceExample
             Console.Write("Password (max 6 characters, recommended 4): ");
             String password = Console.ReadLine();
 
-            Thread.Sleep(1000);
-            Console.WriteLine("Brute-Force hacking starts...");
+            Thread.Sleep(5000);
+            Console.WriteLine("\nBrute-Force hacking starts...");
 
             String current = "";
 
@@ -39,7 +39,7 @@ namespace BruteForceExample
 
                 current = (alphabet[pos[5]] + alphabet[pos[4]] + alphabet[pos[3]] + alphabet[pos[2]] + alphabet[pos[1]] + alphabet[pos[0]]).ToString();
 
-                Console.WriteLine($"\nLetter sequence: {current}");
+                if (count %1 == 0) Console.WriteLine($"\nLetter sequence: {current}");
 
                 pos[0]++;
             
@@ -77,14 +77,14 @@ namespace BruteForceExample
                     }
                 }
 
-                if (password.Equals(current))
-                {
-                    Console.WriteLine("Password found");
-                }
-                else
-                {
-                    Console.WriteLine("Password not found");
-                }
+            }
+            if (password.Equals(current))
+            {
+                Console.WriteLine("Password found");
+            }
+            else
+            {
+                Console.WriteLine("Password not found");
             }
 
         }
